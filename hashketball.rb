@@ -224,10 +224,10 @@ def big_shoe_rebounds
 
   counter_2 = 0
   while counter_2 < 5 do
+    binding.pry
     if hashketball[:home][:players][counter][:shoe] = biggest_shoe_size
       return hashketball[:home][:players][counter][:rebounds]
     end
-    binding.pry
     if hashketball[:away][:players][counter][:shoe] = biggest_shoe_size
       return hashketball[:away][:players][counter][:rebounds]
     end
