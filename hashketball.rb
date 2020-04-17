@@ -202,3 +202,28 @@ def player_stats(player_name)
     counter += 1
   end
 end
+
+def big_shoe_rebounds
+  hashketball = game_hash
+  biggest_shoe_size = hashketball[:home][:players][0][:shoe]
+  counter = 0
+  while counter < 5 do
+    if hashketball[:home][:players][counter][:shoe] > biggest_shoe_size
+      biggest_shoe_size = hashketball[:home][:players][counter][:shoe]
+    end
+    counter += 1
+  end
+
+  counter = 0 
+  while counter < 5 do
+    if hashketball[:away][:players][counter][:shoe] > biggest_shoe_size
+      biggest_shoe_size = hashketball[:home][:players][counter][:shoe]
+    end
+    counter += 1
+  end
+
+  binding.pry
+end
+  
+    
+  
